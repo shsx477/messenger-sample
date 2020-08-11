@@ -29,6 +29,8 @@
 		A10B118824D6D85700FA36D6 /* EaFriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B118724D6D85700FA36D6 /* EaFriendModel.swift */; };
 		A12151F924E11FD3003B6572 /* EaTextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12151F824E11FD3003B6572 /* EaTextEditView.swift */; };
 		A12151FB24E1298B003B6572 /* EaTextEditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12151FA24E1298B003B6572 /* EaTextEditVM.swift */; };
+		A128C9C224E288C900BD0E48 /* EaCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128C9C124E288C900BD0E48 /* EaCustomTextField.swift */; };
+		A128C9C424E28FDB00BD0E48 /* EaKeyboardAwareModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A128C9C324E28FDB00BD0E48 /* EaKeyboardAwareModifier.swift */; };
 		A12AF77024DD753000F79F74 /* EaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12AF76F24DD753000F79F74 /* EaExtensions.swift */; };
 		A12AF77224DFB63900F79F74 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12AF77124DFB63900F79F74 /* Utils.swift */; };
 		A1AC399C24E0F8F20093B363 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC399B24E0F8F20093B363 /* test.swift */; };
@@ -90,6 +92,8 @@
 		A10B118724D6D85700FA36D6 /* EaFriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaFriendModel.swift; sourceTree = "<group>"; };
 		A12151F824E11FD3003B6572 /* EaTextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaTextEditView.swift; sourceTree = "<group>"; };
 		A12151FA24E1298B003B6572 /* EaTextEditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaTextEditVM.swift; sourceTree = "<group>"; };
+		A128C9C124E288C900BD0E48 /* EaCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaCustomTextField.swift; sourceTree = "<group>"; };
+		A128C9C324E28FDB00BD0E48 /* EaKeyboardAwareModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaKeyboardAwareModifier.swift; sourceTree = "<group>"; };
 		A12AF76F24DD753000F79F74 /* EaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaExtensions.swift; sourceTree = "<group>"; };
 		A12AF77124DFB63900F79F74 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A1AC399B24E0F8F20093B363 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			children = (
 				A1B1A40D24DD6A2A00E16400 /* Buttons */,
 				A107247224D764FD0075001C /* EaProfileImage.swift */,
+				A128C9C124E288C900BD0E48 /* EaCustomTextField.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				A107247B24D847920075001C /* EaConstant.swift */,
 				A12AF76F24DD753000F79F74 /* EaExtensions.swift */,
 				A12AF77124DFB63900F79F74 /* Utils.swift */,
+				A128C9C324E28FDB00BD0E48 /* EaKeyboardAwareModifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 			files = (
 				A107247924D8461A0075001C /* EaProfileInfoVM.swift in Sources */,
 				A1B1A40024DAB56200E16400 /* EaBackgroundHistoryVM.swift in Sources */,
+				A128C9C224E288C900BD0E48 /* EaCustomTextField.swift in Sources */,
 				A1B1A3FC24DAB52F00E16400 /* EaProfileHistoryVM.swift in Sources */,
 				A12AF77224DFB63900F79F74 /* Utils.swift in Sources */,
 				A10B113F24D6C8AE00FA36D6 /* AppDelegate.swift in Sources */,
@@ -433,6 +440,7 @@
 				A107247C24D847920075001C /* EaConstant.swift in Sources */,
 				A1AC399C24E0F8F20093B363 /* test.swift in Sources */,
 				A1B1A40C24DD69EC00E16400 /* EaOkButton.swift in Sources */,
+				A128C9C424E28FDB00BD0E48 /* EaKeyboardAwareModifier.swift in Sources */,
 				A1B1A40224DABDAA00E16400 /* EaCloseButton.swift in Sources */,
 				A10B114124D6C8AE00FA36D6 /* SceneDelegate.swift in Sources */,
 				A12AF77024DD753000F79F74 /* EaExtensions.swift in Sources */,

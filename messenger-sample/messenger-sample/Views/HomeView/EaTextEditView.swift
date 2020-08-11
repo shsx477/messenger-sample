@@ -2,15 +2,22 @@ import SwiftUI
 
 struct EaTextEditView: View {
   @ObservedObject var vm: EaTextEditVM
-
+  
   var body: some View {
-    VStack {
-      TopMenuView()
-      Spacer()
-      ContentView(text: $vm.text)
-      Spacer()
+    ZStack {
+      Rectangle()
+        .foregroundColor(Color.black)
+        .opacity(0.5)
+        .edgesIgnoringSafeArea(.all)
+      
+      VStack {
+        TopMenuView()
+        Spacer()
+        ContentView()
+        Spacer()
+      }
+      .keyboardAwarePadding()
     }
-    .background(Color.blue)
     .environmentObject(self.vm)
   }
 }
@@ -21,7 +28,7 @@ private struct TopMenuView: View {
   var body: some View {
     HStack {
       EaCancelButton() {
-        self.vm.close()
+        self.vm.close(isApply: false)
       }
       
       Spacer()
@@ -33,7 +40,7 @@ private struct TopMenuView: View {
       Spacer()
       
       EaOkButton() {
-        
+        self.vm.close(isApply: true)
       }
     }
     .paddingTopMenuForSheet()
@@ -41,36 +48,36 @@ private struct TopMenuView: View {
 }
 
 private struct ContentView: View {
-  @Binding var text: String
-  @State private var numberOfText: Int = 0
-  
-  init(text: Binding<String>) {
-    self._text = text
-    self.numberOfText = self.text.count
-  }
+  @EnvironmentObject var vm: EaTextEditVM
   
   var body: some View {
     VStack {
-      HStack {
-        TextField("", text: $text)
-          .multilineTextAlignment(.center)
+      ZStack {
+        EaCustomTextField(text: $vm.text, maxLength: $vm.maxLength, isFirstResponder: true)
           .foregroundColor(.white)
-          .font(.system(size: 25))
+          .frame(height: 25)
         
-        ZStack {
-          Circle()
-            .frame(width: 17, height: 17)
-            .foregroundColor(Color.white)
-          
-          Image(systemName: "xmark.circle.fill")
-          .foregroundColor(Color.gray)
+        HStack {
+          Spacer()
+          ZStack {
+            Circle()
+              .frame(width: 17, height: 17)
+              .foregroundColor(Color.white)
+            
+            Image(systemName: "xmark.circle.fill")
+              .foregroundColor(Color.gray)
+              .onTapGesture {
+                self.vm.clearText()
+            }
+          }
         }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
       }
-
+      
       Divider()
         .background(Color.white)
       
-      Text("\(numberOfText) / 20")
+      Text("\(vm.textCount) / \(vm.maxLength)")
         .font(.system(size: 15))
         .foregroundColor(Color.white)
     }
@@ -79,9 +86,15 @@ private struct ContentView: View {
 }
 
 struct EaTextEditView_Previews: PreviewProvider {
+  private static let vm: EaTextEditVM = {
+    let vm = EaTextEditVM { _, _ in
+      print("")
+    }
+    vm.text = "test123123123"
+    return vm
+  }()
+  
   static var previews: some View {
-    EaTextEditView(vm: EaTextEditVM(text: "test") {
-      print("close")
-    })
+    EaTextEditView(vm: vm)
   }
 }

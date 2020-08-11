@@ -33,7 +33,11 @@ class EaProfileInfoVM: ObservableObject {
     self.isShowProfileEditor = true
   }
   
-  func closeProfileEditor() {
+  func closeProfileEditor(isApply: Bool, newUserData: EaUserModel) {
+    if isApply {
+      self.userData = newUserData
+    }
+    
     self.isShowProfileEditor = false
   }
 }

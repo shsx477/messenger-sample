@@ -1,12 +1,12 @@
 import SwiftUI
 
 private let iconSize: CGFloat = 25
+private var profileBottomPadding: CGFloat { EaProfileInfoView.profileImageBottomPadding }
 
 struct EaProfileEditView: View {
   @ObservedObject var vm: EaProfileEditVM
 
-  private var profileBottomPadding: CGFloat { EaProfileInfoView.profileImageBottomPadding }
-
+  @ViewBuilder
   var body: some View {
     ZStack {
       VStack {
@@ -16,40 +16,15 @@ struct EaProfileEditView: View {
         BottomMenuView()
       }
       
-      VStack {
-        Spacer()
-        Rectangle()
-          .frame(width: EaConstant.profileImageSize, height: EaConstant.profileImageSize)
-          .clipShape(EaProfileImage.ClippingShape())
-          .foregroundColor(Color.clear)
-          .contentShape(Rectangle())
-          .padding(EdgeInsets(top: 0,
-                              leading: 0,
-                              bottom: profileBottomPadding,
-                              trailing: 0))
-          .onTapGesture {
-            print("clicked")
-        }
-      }
+      // profile rectangle for event
+      ProfileImageRectangleView()
       
-      VStack {
-        Spacer()
-        
-        ZStack {
-          Circle()
-            .frame(width: iconSize, height: iconSize)
-            .foregroundColor(.black)
-
-          Image(systemName: "camera.circle.fill")
-            .resizable()
-            .frame(width: iconSize, height: iconSize)
-            .foregroundColor(Color.white)
-        }
-        .padding(EdgeInsets(top: 0,
-                            leading: 0,
-                            bottom: profileBottomPadding,
-                            trailing: 0))
-        .alignmentGuide(HorizontalAlignment.center) { _ in -60 }
+      // camera icon in the center
+      CameraIconView()
+      
+      // text editing view
+      if self.vm.isShowEditTextView {
+        EaTextEditView(vm: vm.textEditVM)
       }
     }
     .environmentObject(self.vm)
@@ -62,8 +37,8 @@ private struct TopMenuView: View {
   var body: some View {
     HStack {
       EaCancelButton() {
-        withAnimation {
-          self.vm.closeSelf()
+        withAnimation(.linear(duration: 0.5)) {
+          self.vm.closeSelf(isApply: false)
         }
       }
       
@@ -76,7 +51,7 @@ private struct TopMenuView: View {
       Spacer()
       
       EaOkButton(title: "완료") {
-        print("")
+        self.vm.closeSelf(isApply: true)
       }
     }
     .paddingTopMenuForSheet()
@@ -89,7 +64,14 @@ private struct ProfileView: View {
   var body: some View {
     VStack {
       TextView(text: $vm.userData.name, fontSize: EaProfileInfoView.nameFontSize)
+        .onTapGesture {
+          self.vm.onNameTapGesture()
+      }
+      
       TextView(text: $vm.userData.message, fontSize: EaProfileInfoView.stateMessageFontSize)
+        .onTapGesture {
+          self.vm.onStateMessageTapGesture()
+      }
     }
     .frame(height: EaProfileInfoView.profileTextHeight, alignment: .bottom)
   }
@@ -126,6 +108,50 @@ private struct BottomMenuView: View {
   }
 }
 
+private struct ProfileImageRectangleView: View {
+  var body: some View {
+    VStack {
+      Spacer()
+      Rectangle()
+        .frame(width: EaConstant.profileImageSize, height: EaConstant.profileImageSize)
+        .clipShape(EaProfileImage.ClippingShape())
+        .foregroundColor(Color.clear)
+        .contentShape(Rectangle())
+        .padding(EdgeInsets(top: 0,
+                            leading: 0,
+                            bottom: profileBottomPadding,
+                            trailing: 0))
+        .onTapGesture {
+          print("clicked")
+      }
+    }
+  }
+}
+
+private struct CameraIconView: View {
+  var body: some View {
+    VStack {
+      Spacer()
+      
+      ZStack {
+        Circle()
+          .frame(width: iconSize, height: iconSize)
+          .foregroundColor(.black)
+
+        Image(systemName: "camera.circle.fill")
+          .resizable()
+          .frame(width: iconSize, height: iconSize)
+          .foregroundColor(Color.white)
+      }
+      .padding(EdgeInsets(top: 0,
+                          leading: 0,
+                          bottom: profileBottomPadding,
+                          trailing: 0))
+      .alignmentGuide(HorizontalAlignment.center) { _ in -60 }
+    }
+  }
+}
+
 private struct TextView: View {
   @Binding var text: String
   let fontSize: CGFloat
@@ -155,7 +181,7 @@ struct EaUserEditView_Previews: PreviewProvider {
   static var previews: some View {
     ZStack {
       Color.blue.edgesIgnoringSafeArea(.all)
-      EaProfileEditView(vm: EaProfileEditVM(userData: EaUserModel.createTestData()) {
+      EaProfileEditView(vm: EaProfileEditVM(userData: EaUserModel.createTestData()) { isApply, newUserData in
         print("close")
       })
     }

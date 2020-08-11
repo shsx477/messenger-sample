@@ -24,9 +24,9 @@ struct EaProfileInfoView: View {
         }
       }
       
+      // for event when tapped
       if !vm.isShowProfileEditor {
         VStack {
-          // for event when tapped
           Rectangle()
             .foregroundColor(.clear)
             .contentShape(Rectangle())
@@ -76,8 +76,8 @@ struct EaProfileInfoView: View {
           BottomMenuView()
         }
       } else {
-        EaProfileEditView(vm: EaProfileEditVM(userData: self.vm.userData) {
-          self.vm.closeProfileEditor()
+        EaProfileEditView(vm: EaProfileEditVM(userData: self.vm.userData) { isApply, newUserData in
+          self.vm.closeProfileEditor(isApply: isApply, newUserData: newUserData)
         })
       }
     }
@@ -147,7 +147,7 @@ private struct BottomMenuItemView: View {
         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
     }
     .onTapGesture {
-      withAnimation {
+      withAnimation(.linear(duration: 0.5)) {
         self.action()
       }
     }
