@@ -10,12 +10,11 @@
 		A107247024D761D90075001C /* EaUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107246F24D761D90075001C /* EaUserModel.swift */; };
 		A107247324D764FD0075001C /* EaProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247224D764FD0075001C /* EaProfileImage.swift */; };
 		A107247524D826A90075001C /* EaHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247424D826A90075001C /* EaHomeVM.swift */; };
-		A107247724D8434E0075001C /* EaUserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247624D8434E0075001C /* EaUserInfoView.swift */; };
-		A107247924D8461A0075001C /* EaUserInfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247824D8461A0075001C /* EaUserInfoVM.swift */; };
-		A107247C24D847920075001C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247B24D847920075001C /* Util.swift */; };
+		A107247724D8434E0075001C /* EaProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247624D8434E0075001C /* EaProfileInfoView.swift */; };
+		A107247924D8461A0075001C /* EaProfileInfoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247824D8461A0075001C /* EaProfileInfoVM.swift */; };
+		A107247C24D847920075001C /* EaConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107247B24D847920075001C /* EaConstant.swift */; };
 		A10B113F24D6C8AE00FA36D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B113E24D6C8AE00FA36D6 /* AppDelegate.swift */; };
 		A10B114124D6C8AE00FA36D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B114024D6C8AE00FA36D6 /* SceneDelegate.swift */; };
-		A10B114324D6C8AE00FA36D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B114224D6C8AE00FA36D6 /* ContentView.swift */; };
 		A10B114524D6C8AF00FA36D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10B114424D6C8AF00FA36D6 /* Assets.xcassets */; };
 		A10B114824D6C8AF00FA36D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10B114724D6C8AF00FA36D6 /* Preview Assets.xcassets */; };
 		A10B114B24D6C8AF00FA36D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10B114924D6C8AF00FA36D6 /* LaunchScreen.storyboard */; };
@@ -28,11 +27,21 @@
 		A10B118324D6CCA700FA36D6 /* EaConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B118224D6CCA700FA36D6 /* EaConfigView.swift */; };
 		A10B118624D6D65B00FA36D6 /* EaImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B118524D6D65B00FA36D6 /* EaImageExtension.swift */; };
 		A10B118824D6D85700FA36D6 /* EaFriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10B118724D6D85700FA36D6 /* EaFriendModel.swift */; };
+		A12151F924E11FD3003B6572 /* EaTextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12151F824E11FD3003B6572 /* EaTextEditView.swift */; };
+		A12151FB24E1298B003B6572 /* EaTextEditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12151FA24E1298B003B6572 /* EaTextEditVM.swift */; };
+		A12AF77024DD753000F79F74 /* EaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12AF76F24DD753000F79F74 /* EaExtensions.swift */; };
+		A12AF77224DFB63900F79F74 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12AF77124DFB63900F79F74 /* Utils.swift */; };
+		A1AC399C24E0F8F20093B363 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC399B24E0F8F20093B363 /* test.swift */; };
 		A1B1A3F924DAB49500E16400 /* EaProfileHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A3F824DAB49500E16400 /* EaProfileHistoryView.swift */; };
 		A1B1A3FC24DAB52F00E16400 /* EaProfileHistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A3FB24DAB52F00E16400 /* EaProfileHistoryVM.swift */; };
 		A1B1A3FE24DAB54F00E16400 /* EaBackgroundHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A3FD24DAB54F00E16400 /* EaBackgroundHistoryView.swift */; };
 		A1B1A40024DAB56200E16400 /* EaBackgroundHistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A3FF24DAB56200E16400 /* EaBackgroundHistoryVM.swift */; };
 		A1B1A40224DABDAA00E16400 /* EaCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A40124DABDAA00E16400 /* EaCloseButton.swift */; };
+		A1B1A40424DD66A100E16400 /* EaProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A40324DD66A100E16400 /* EaProfileEditView.swift */; };
+		A1B1A40624DD66B200E16400 /* EaProfileEditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A40524DD66B200E16400 /* EaProfileEditVM.swift */; };
+		A1B1A40824DD68E400E16400 /* EaTrashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A40724DD68E400E16400 /* EaTrashButton.swift */; };
+		A1B1A40A24DD691400E16400 /* EaCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A40924DD691400E16400 /* EaCancelButton.swift */; };
+		A1B1A40C24DD69EC00E16400 /* EaOkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1A40B24DD69EC00E16400 /* EaOkButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +65,12 @@
 		A107246F24D761D90075001C /* EaUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaUserModel.swift; sourceTree = "<group>"; };
 		A107247224D764FD0075001C /* EaProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaProfileImage.swift; sourceTree = "<group>"; };
 		A107247424D826A90075001C /* EaHomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaHomeVM.swift; sourceTree = "<group>"; };
-		A107247624D8434E0075001C /* EaUserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaUserInfoView.swift; sourceTree = "<group>"; };
-		A107247824D8461A0075001C /* EaUserInfoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaUserInfoVM.swift; sourceTree = "<group>"; };
-		A107247B24D847920075001C /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		A107247624D8434E0075001C /* EaProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaProfileInfoView.swift; sourceTree = "<group>"; };
+		A107247824D8461A0075001C /* EaProfileInfoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaProfileInfoVM.swift; sourceTree = "<group>"; };
+		A107247B24D847920075001C /* EaConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaConstant.swift; sourceTree = "<group>"; };
 		A10B113B24D6C8AE00FA36D6 /* messenger-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "messenger-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10B113E24D6C8AE00FA36D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A10B114024D6C8AE00FA36D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A10B114224D6C8AE00FA36D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A10B114424D6C8AF00FA36D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A10B114724D6C8AF00FA36D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A10B114A24D6C8AF00FA36D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,11 +88,21 @@
 		A10B118224D6CCA700FA36D6 /* EaConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaConfigView.swift; sourceTree = "<group>"; };
 		A10B118524D6D65B00FA36D6 /* EaImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaImageExtension.swift; sourceTree = "<group>"; };
 		A10B118724D6D85700FA36D6 /* EaFriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaFriendModel.swift; sourceTree = "<group>"; };
+		A12151F824E11FD3003B6572 /* EaTextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaTextEditView.swift; sourceTree = "<group>"; };
+		A12151FA24E1298B003B6572 /* EaTextEditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaTextEditVM.swift; sourceTree = "<group>"; };
+		A12AF76F24DD753000F79F74 /* EaExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaExtensions.swift; sourceTree = "<group>"; };
+		A12AF77124DFB63900F79F74 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A1AC399B24E0F8F20093B363 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		A1B1A3F824DAB49500E16400 /* EaProfileHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaProfileHistoryView.swift; sourceTree = "<group>"; };
 		A1B1A3FB24DAB52F00E16400 /* EaProfileHistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaProfileHistoryVM.swift; sourceTree = "<group>"; };
 		A1B1A3FD24DAB54F00E16400 /* EaBackgroundHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaBackgroundHistoryView.swift; sourceTree = "<group>"; };
 		A1B1A3FF24DAB56200E16400 /* EaBackgroundHistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaBackgroundHistoryVM.swift; sourceTree = "<group>"; };
 		A1B1A40124DABDAA00E16400 /* EaCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaCloseButton.swift; sourceTree = "<group>"; };
+		A1B1A40324DD66A100E16400 /* EaProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaProfileEditView.swift; sourceTree = "<group>"; };
+		A1B1A40524DD66B200E16400 /* EaProfileEditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaProfileEditVM.swift; sourceTree = "<group>"; };
+		A1B1A40724DD68E400E16400 /* EaTrashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaTrashButton.swift; sourceTree = "<group>"; };
+		A1B1A40924DD691400E16400 /* EaCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaCancelButton.swift; sourceTree = "<group>"; };
+		A1B1A40B24DD69EC00E16400 /* EaOkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaOkButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +133,8 @@
 		A107247124D764E70075001C /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				A1B1A40D24DD6A2A00E16400 /* Buttons */,
 				A107247224D764FD0075001C /* EaProfileImage.swift */,
-				A1B1A40124DABDAA00E16400 /* EaCloseButton.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -124,7 +142,9 @@
 		A107247A24D847880075001C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A107247B24D847920075001C /* Util.swift */,
+				A107247B24D847920075001C /* EaConstant.swift */,
+				A12AF76F24DD753000F79F74 /* EaExtensions.swift */,
+				A12AF77124DFB63900F79F74 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -160,7 +180,6 @@
 				A10B116E24D6C8DD00FA36D6 /* Views */,
 				A10B113E24D6C8AE00FA36D6 /* AppDelegate.swift */,
 				A10B114024D6C8AE00FA36D6 /* SceneDelegate.swift */,
-				A10B114224D6C8AE00FA36D6 /* ContentView.swift */,
 				A10B114424D6C8AF00FA36D6 /* Assets.xcassets */,
 				A10B114924D6C8AF00FA36D6 /* LaunchScreen.storyboard */,
 				A10B114C24D6C8AF00FA36D6 /* Info.plist */,
@@ -203,6 +222,7 @@
 				A10B117E24D6CC2600FA36D6 /* EaChatView.swift */,
 				A10B118024D6CC3700FA36D6 /* EaSharpView.swift */,
 				A10B118224D6CCA700FA36D6 /* EaConfigView.swift */,
+				A1AC399B24E0F8F20093B363 /* test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,9 +256,11 @@
 			isa = PBXGroup;
 			children = (
 				A10B117324D6CB2700FA36D6 /* EaHomeView.swift */,
-				A107247624D8434E0075001C /* EaUserInfoView.swift */,
+				A107247624D8434E0075001C /* EaProfileInfoView.swift */,
 				A1B1A3F824DAB49500E16400 /* EaProfileHistoryView.swift */,
 				A1B1A3FD24DAB54F00E16400 /* EaBackgroundHistoryView.swift */,
+				A1B1A40324DD66A100E16400 /* EaProfileEditView.swift */,
+				A12151F824E11FD3003B6572 /* EaTextEditView.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -247,11 +269,24 @@
 			isa = PBXGroup;
 			children = (
 				A107247424D826A90075001C /* EaHomeVM.swift */,
-				A107247824D8461A0075001C /* EaUserInfoVM.swift */,
+				A107247824D8461A0075001C /* EaProfileInfoVM.swift */,
 				A1B1A3FB24DAB52F00E16400 /* EaProfileHistoryVM.swift */,
 				A1B1A3FF24DAB56200E16400 /* EaBackgroundHistoryVM.swift */,
+				A1B1A40524DD66B200E16400 /* EaProfileEditVM.swift */,
+				A12151FA24E1298B003B6572 /* EaTextEditVM.swift */,
 			);
 			path = HomeVM;
+			sourceTree = "<group>";
+		};
+		A1B1A40D24DD6A2A00E16400 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A1B1A40124DABDAA00E16400 /* EaCloseButton.swift */,
+				A1B1A40724DD68E400E16400 /* EaTrashButton.swift */,
+				A1B1A40B24DD69EC00E16400 /* EaOkButton.swift */,
+				A1B1A40924DD691400E16400 /* EaCancelButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,27 +420,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A107247924D8461A0075001C /* EaUserInfoVM.swift in Sources */,
+				A107247924D8461A0075001C /* EaProfileInfoVM.swift in Sources */,
 				A1B1A40024DAB56200E16400 /* EaBackgroundHistoryVM.swift in Sources */,
 				A1B1A3FC24DAB52F00E16400 /* EaProfileHistoryVM.swift in Sources */,
+				A12AF77224DFB63900F79F74 /* Utils.swift in Sources */,
 				A10B113F24D6C8AE00FA36D6 /* AppDelegate.swift in Sources */,
+				A12151FB24E1298B003B6572 /* EaTextEditVM.swift in Sources */,
 				A1B1A3F924DAB49500E16400 /* EaProfileHistoryView.swift in Sources */,
 				A10B118624D6D65B00FA36D6 /* EaImageExtension.swift in Sources */,
 				A1B1A3FE24DAB54F00E16400 /* EaBackgroundHistoryView.swift in Sources */,
-				A107247C24D847920075001C /* Util.swift in Sources */,
+				A1B1A40A24DD691400E16400 /* EaCancelButton.swift in Sources */,
+				A107247C24D847920075001C /* EaConstant.swift in Sources */,
+				A1AC399C24E0F8F20093B363 /* test.swift in Sources */,
+				A1B1A40C24DD69EC00E16400 /* EaOkButton.swift in Sources */,
 				A1B1A40224DABDAA00E16400 /* EaCloseButton.swift in Sources */,
 				A10B114124D6C8AE00FA36D6 /* SceneDelegate.swift in Sources */,
+				A12AF77024DD753000F79F74 /* EaExtensions.swift in Sources */,
 				A10B118124D6CC3700FA36D6 /* EaSharpView.swift in Sources */,
 				A10B118324D6CCA700FA36D6 /* EaConfigView.swift in Sources */,
-				A107247724D8434E0075001C /* EaUserInfoView.swift in Sources */,
+				A107247724D8434E0075001C /* EaProfileInfoView.swift in Sources */,
+				A1B1A40424DD66A100E16400 /* EaProfileEditView.swift in Sources */,
 				A107247524D826A90075001C /* EaHomeVM.swift in Sources */,
-				A10B114324D6C8AE00FA36D6 /* ContentView.swift in Sources */,
 				A107247024D761D90075001C /* EaUserModel.swift in Sources */,
 				A10B118824D6D85700FA36D6 /* EaFriendModel.swift in Sources */,
+				A1B1A40824DD68E400E16400 /* EaTrashButton.swift in Sources */,
 				A10B117424D6CB2700FA36D6 /* EaHomeView.swift in Sources */,
+				A1B1A40624DD66B200E16400 /* EaProfileEditVM.swift in Sources */,
 				A107247324D764FD0075001C /* EaProfileImage.swift in Sources */,
 				A10B117F24D6CC2600FA36D6 /* EaChatView.swift in Sources */,
 				A10B117224D6CA6100FA36D6 /* EaTabMainView.swift in Sources */,
+				A12151F924E11FD3003B6572 /* EaTextEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

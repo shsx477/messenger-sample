@@ -11,7 +11,7 @@ struct EaProfileHistoryView: View {
       ZStack() {
         // image
         ZStack {
-          UIImage(data: Util.tempProfileImageData).map {
+          UIImage(data: EaConstant.tempProfileImageData).map {
             Image(uiImage: $0)
               .resizable()
           }
@@ -39,10 +39,10 @@ private struct TopMenuView: View {
     HStack {
       EaCloseButton()
       Spacer()
-      Image(systemName: Util.tempIconName).foregroundColor(.white)
+      Utils.creatTempImage()
     }
     .frame(height: EaHomeView.topMenuViewHeight)
-    .padding(EaHomeView.topMenuViewPadding)
+    .paddingTopMenuForSheet()
   }
 }
 

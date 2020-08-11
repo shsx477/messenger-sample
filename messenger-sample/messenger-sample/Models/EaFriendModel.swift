@@ -12,19 +12,19 @@ struct EaFriendModel: Decodable, Identifiable {
   static func createTestDatas() -> [EaFriendModel] {
     return [EaFriendModel(name: "친구1",
                           message: "상태 메시지",
-                          profileImage: Util.tempProfileImageData,
+                          profileImage: EaConstant.tempProfileImageData,
                           backgroundImage: nil),
             EaFriendModel(name: "친구2",
                           message: "상태 메시지",
-                          profileImage: Util.tempProfileImageData,
+                          profileImage: EaConstant.tempProfileImageData,
                           backgroundImage: nil),
             EaFriendModel(name: "친구3",
                           message: "상태 메시지",
-                          profileImage: Util.tempProfileImageData,
+                          profileImage: EaConstant.tempProfileImageData,
                           backgroundImage: nil),
             EaFriendModel(name: "친구4",
                           message: "상태 메시지",
-                          profileImage: Util.tempProfileImageData,
+                          profileImage: EaConstant.tempProfileImageData,
                           backgroundImage: nil),
     ]
   }

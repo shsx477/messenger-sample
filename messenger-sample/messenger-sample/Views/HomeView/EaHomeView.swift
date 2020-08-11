@@ -4,7 +4,6 @@ private let rowInsets = EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
 
 struct EaHomeView: View {
   static let topMenuViewHeight: CGFloat = 25
-  static let topMenuViewPadding: CGFloat = 20
   
   @ObservedObject var vm: EaHomeVM
   
@@ -14,31 +13,29 @@ struct EaHomeView: View {
         Text("친구").font(.system(size: 25))
         Spacer()
         HStack {
-          Image(systemName: Util.tempIconName)
-          Image(systemName: Util.tempIconName)
-          Image(systemName: Util.tempIconName)
-          Image(systemName: Util.tempIconName)
+          Utils.creatTempImage()
+          Utils.creatTempImage()
+          Utils.creatTempImage()
+          Utils.creatTempImage()
         }
       }
       .frame(height: 30)
       
-      EaUserListView(userData: $vm.userData, friendDatas: $vm.friendDatas)
+      EaUserListView()
     }
     .padding(10)
+    .environmentObject(self.vm)
   }
 }
 
 // total user list
 private struct EaUserListView: View {
-  @Binding var userData: EaUserModel
-  @Binding var friendDatas: [EaFriendModel]
-  @State private var show: Bool = false
-  
-  
+  @EnvironmentObject var vm: EaHomeVM
+
   var body: some View {
     List {
       // user
-      EaUserRowView(userData: $userData)
+      EaUserRowView()
 
       // divider
       Divider()
@@ -47,10 +44,10 @@ private struct EaUserListView: View {
         .listRowInsets(rowInsets)
       
       // friend count
-      EaFriendCountRowView(friendCount: friendDatas.count)
+      EaFriendCountRowView(friendCount: vm.friendDatas.count)
       
       // friends
-      ForEach(friendDatas) { friend in
+      ForEach(vm.friendDatas) { friend in
         EaFriendRowView(friend: friend)
       }
     }
@@ -63,22 +60,21 @@ private struct EaUserListView: View {
 
 // user Row
 private struct EaUserRowView: View {
-  @State private var isPresented: Bool = false
-  @Binding var userData: EaUserModel
+  @EnvironmentObject var vm: EaHomeVM
   
   var body: some View {
     VStack {
       HStack {
-        EaProfileImage(imageData: userData.profileImage, size: 50)
+        EaProfileImage(imageData: vm.userData.profileImage, size: 50)
         
         VStack {
           HStack {
-            Text(userData.name)
+            Text(vm.userData.name)
             Spacer()
           }
 
           HStack {
-            Text(userData.message)
+            Text(vm.userData.message)
               .font(.system(size: 13))
               .foregroundColor(Color.gray)
             Spacer()
@@ -90,12 +86,8 @@ private struct EaUserRowView: View {
     }
     .contentShape(Rectangle())  // for event when tapped
     .listRowInsets(rowInsets)
-    .sheet(isPresented: $isPresented) {
-      EaUserInfoView(vm: EaUserInfoVM(userData: self.userData))
-    }
-    .onTapGesture {
-      self.isPresented = true
-    }
+    .sheet(isPresented: $vm.isUserPresented) { self.vm.onUserSheet() }
+    .onTapGesture { self.vm.onUserTapGesture() }
   }
 }
 
