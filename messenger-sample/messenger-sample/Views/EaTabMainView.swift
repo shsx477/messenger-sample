@@ -3,7 +3,7 @@ import SwiftUI
 struct EaTabMainView: View {
   var body: some View {
     TabView {
-      EaHomeView(vm: EaHomeVM())
+      EaHomeView(vm: EaHomeVM(userData: EaUserModel.createTestData()))
         .tabItem {
           self.CreateTabBarImage(systemName: "person")
       }

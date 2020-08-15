@@ -64,14 +64,10 @@ private struct ProfileView: View {
   var body: some View {
     VStack {
       TextView(text: $vm.userData.name, fontSize: EaProfileInfoView.nameFontSize)
-        .onTapGesture {
-          self.vm.onNameTapGesture()
-      }
+        .onTapGesture(perform: self.vm.onNameTapGesture)
       
       TextView(text: $vm.userData.message, fontSize: EaProfileInfoView.stateMessageFontSize)
-        .onTapGesture {
-          self.vm.onStateMessageTapGesture()
-      }
+        .onTapGesture(perform: self.vm.onStateMessageTapGesture)
     }
     .frame(height: EaProfileInfoView.profileTextHeight, alignment: .bottom)
   }

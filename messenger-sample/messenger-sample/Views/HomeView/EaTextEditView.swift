@@ -66,9 +66,7 @@ private struct ContentView: View {
             
             Image(systemName: "xmark.circle.fill")
               .foregroundColor(Color.gray)
-              .onTapGesture {
-                self.vm.clearText()
-            }
+              .onTapGesture(perform: self.vm.clearText)
           }
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))

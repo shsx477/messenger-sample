@@ -9,4 +9,6 @@ class EaConstant {
   static let profileImageSize: CGFloat = 80
   static let nameMaxLength = 20
   static let stateMessageMaxLength = 60
+  
+  static let topMenuPaddingForSheet: CGFloat = 20
 }

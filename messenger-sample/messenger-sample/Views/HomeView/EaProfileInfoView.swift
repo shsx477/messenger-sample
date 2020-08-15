@@ -27,12 +27,15 @@ struct EaProfileInfoView: View {
       // for event when tapped
       if !vm.isShowProfileEditor {
         VStack {
+          Spacer()
+            .frame(height: EaHomeView.topMenuViewHeight + EaConstant.topMenuPaddingForSheet)
+          
           Rectangle()
             .foregroundColor(.clear)
             .contentShape(Rectangle())
             .sheet(isPresented: $vm.isBgPresented) { self.vm.onBgSheet() }
-            .onTapGesture { self.vm.onBgTapGesture() }
-          
+            .onTapGesture(perform: self.vm.onBgTapGesture)
+
           Spacer()
             .frame(height: EaProfileInfoView.bottomMenuHeight)
         }
@@ -43,7 +46,7 @@ struct EaProfileInfoView: View {
         
         EaProfileImage(imageData: vm.userData.profileImage, size: EaConstant.profileImageSize)
           .sheet(isPresented: $vm.isProfilePresented) { self.vm.onProfileSheet() }
-          .onTapGesture { self.vm.onProfileTapGesture() }
+          .onTapGesture(perform: self.vm.onProfileTapGesture)
           .padding(EdgeInsets(top: 0,
                               leading: 0,
                               bottom: EaProfileInfoView.profileImageBottomPadding,

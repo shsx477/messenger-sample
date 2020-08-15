@@ -87,7 +87,7 @@ private struct EaUserRowView: View {
     .contentShape(Rectangle())  // for event when tapped
     .listRowInsets(rowInsets)
     .sheet(isPresented: $vm.isUserPresented) { self.vm.onUserSheet() }
-    .onTapGesture { self.vm.onUserTapGesture() }
+    .onTapGesture(perform: self.vm.onUserTapGesture)
   }
 }
 
@@ -131,6 +131,6 @@ private struct EaFriendRowView: View {
 
 struct EaUserView_Previews: PreviewProvider {
   static var previews: some View {
-    EaHomeView(vm: EaHomeVM())
+    EaHomeView(vm: EaHomeVM(userData: EaUserModel.createTestData()))
   }
 }
